@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -62,6 +62,18 @@
     border-radius: 30px;
 background: linear-gradient(135deg, #e6a667 0%, #6a74e1 100%);
   }
+    .reveal {
+    opacity: 0;
+    transform: scale(0.9) rotateX(15deg);
+    transition: all 0.9s ease-in-out;
+    will-change: opacity, transform;
+  }
+
+  .reveal.active {
+    opacity: 1;
+    transform: scale(1) rotateX(0deg);
+  }
+
 </style>
 
 </head>
@@ -127,7 +139,7 @@ background: linear-gradient(135deg, #e6a667 0%, #6a74e1 100%);
  <!-- Add this line in your <head> if not already included -->
  
 
-<div class="container my-2 text-center" id="skill">
+<div class="container my-2 text-center reveal" id="skill">
    <h1>
         <b style="color: rgb(235, 127, 13);">my</b>
         <b style="color: rgb(161, 8, 8);">Skills</b>
@@ -135,7 +147,7 @@ background: linear-gradient(135deg, #e6a667 0%, #6a74e1 100%);
   <div class="row">
 
     <!-- C Language -->
-    <div class="col-lg-3 col-md-6 mb-4">
+    <div class="col-lg-3 col-md-6 mb-4 reveal">
       <div class="card h-100 shadow  text-center">
         <div class="card-body">
           <i class="bi bi-terminal" style="font-size: 2rem;"></i>
@@ -146,7 +158,7 @@ background: linear-gradient(135deg, #e6a667 0%, #6a74e1 100%);
     </div>
 
     <!-- Java -->
-    <div class="col-lg-3 col-md-6 mb-4">
+    <div class="col-lg-3 col-md-6 mb-4 reveal">
       <div class="card h-100 shadow text-center">
         <div class="card-body">
           <i class="bi bi-code-slash" style="font-size: 2rem;"></i>
@@ -157,7 +169,7 @@ background: linear-gradient(135deg, #e6a667 0%, #6a74e1 100%);
     </div>
 
     <!-- HTML/CSS -->
-    <div class="col-lg-3 col-md-6 mb-4">
+    <div class="col-lg-3 col-md-6 mb-4 reveal">
       <div class="card h-100 shadow text-center">
         <div class="card-body">
           <i class="bi bi-browser-chrome" style="font-size: 2rem;"></i>
@@ -168,7 +180,7 @@ background: linear-gradient(135deg, #e6a667 0%, #6a74e1 100%);
     </div>
 
     <!-- JavaScript -->
-    <div class="col-lg-3 col-md-6 mb-4">
+    <div class="col-lg-3 col-md-6 mb-4 reveal">
       <div class="card h-100 shadow text-center">
         <div class="card-body">
           <i class="bi bi-filetype-js" style="font-size: 2rem;"></i>
@@ -179,7 +191,7 @@ background: linear-gradient(135deg, #e6a667 0%, #6a74e1 100%);
     </div>
 
     <!-- SQL -->
-    <div class="col-lg-3 col-md-6 mb-4">
+    <div class="col-lg-3 col-md-6 mb-4 reveal">
       <div class="card h-100 shadow text-center">
         <div class="card-body">
           <i class="bi bi-database" style="font-size: 2rem;"></i>
@@ -234,7 +246,7 @@ background: linear-gradient(135deg, #e6a667 0%, #6a74e1 100%);
     </div>
 
     <!-- GitHub -->
-    <div class="col-lg-3 col-md-6 mb-4">
+    <div class="col-lg-3 col-md-6 mb-4 reveal">
       <div class="card h-100 shadow text-center">
         <div class="card-body">
           <i class="bi bi-github" style="font-size: 2rem;"></i>
@@ -245,7 +257,7 @@ background: linear-gradient(135deg, #e6a667 0%, #6a74e1 100%);
     </div>
 
     <!-- MS Word -->
-    <div class="col-lg-3 col-md-6 mb-4">
+    <div class="col-lg-3 col-md-6 mb-4 reveal">
       <div class="card h-100 shadow text-center">
         <div class="card-body">
           <i class="bi bi-file-earmark-text" style="font-size: 2rem;"></i>
@@ -256,7 +268,7 @@ background: linear-gradient(135deg, #e6a667 0%, #6a74e1 100%);
     </div>
 
     <!-- Bootstrap -->
-    <div class="col-lg-3 col-md-6 mb-4">
+    <div class="col-lg-3 col-md-6 mb-4 reveal">
       <div class="card h-100 shadow text-center">
         <div class="card-body">
           <i class="bi bi-layout-text-window-reverse" style="font-size: 2rem;"></i>
@@ -273,7 +285,7 @@ background: linear-gradient(135deg, #e6a667 0%, #6a74e1 100%);
 
 <!-- About Section -->
  
-<div class="row  text-center"  id="about" >
+<div class="row  text-center reveal"  id="about" >
    <!-- Title in Full Width Column -->
     <div class="container-fluid text-center">
   <!-- Section Title -->
@@ -287,7 +299,7 @@ background: linear-gradient(135deg, #e6a667 0%, #6a74e1 100%);
   </div>
 
   <!-- Main About Content -->
-  <div class="row align-items-center " style="background-image: url('data:image/jpeg;base64,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 ');background-repeat: no-repeat; background-size: cover;" >
+  <div class="row align-items-center reveal " style="background-image: url('data:image/jpeg;base64,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 ');background-repeat: no-repeat; background-size: cover;" >
 
     <!-- Left Side: Text + Cards -->
     <div class="col-lg-8 col-12 text-center  text-white ">
@@ -300,7 +312,7 @@ background: linear-gradient(135deg, #e6a667 0%, #6a74e1 100%);
       </h4>
 
       <!-- Inner Row with Cards -->
-      <div class="row mt-4">
+      <div class="row mt-4 reveal">
         <div class="col-md-6 mb-3">
           <div class="card mx-auto" style="height: 130px; width: 90%; box-shadow: 4px 5px 6px white;">
             <div class="card-body text-dark">
@@ -313,7 +325,7 @@ background: linear-gradient(135deg, #e6a667 0%, #6a74e1 100%);
           </div>
         </div>
 
-        <div class="col-md-6 mb-3">
+        <div class="col-md-6 mb-3 reveal">
           <div class="card bg-danger text-white mx-auto" style="height: 130px; width: 90%; box-shadow: 4px 5px 6px ;">
             <div class="card-body">
               <h5 class="card-title">Contact Us</h5>
@@ -326,20 +338,20 @@ background: linear-gradient(135deg, #e6a667 0%, #6a74e1 100%);
     </div>
 
     <!-- Right Side: Image -->
-    <div class="col-lg-4 col-12 text-center ">
+    <div class="col-lg-4 col-12 text-center reveal ">
       <img src="ritik1.png" class="img-fluid" style="height: 480px; width: 700px;" alt="Ritik Katiyar">
     </div>
 
   </div>
 </div>
 <!-- projects -->
- <div class="container my-5" id="project">
+ <div class="container my-5 reveal" id="project">
   <h2 class="text-center mb-4" style="color: rgb(235, 127, 13);"><b>My</b> <span style="color: rgb(161, 8, 8);">Projects</span></h2>
 
   <div class="row">
 
     <!-- Project 1 -->
-    <div class="col-md-4 mb-4">
+    <div class="col-md-4 mb-4 reveal">
       <div class="card h-100 shadow-sm project">
         <div class="card-body">
           <h5 class="card-title">Bank Management System</h5>
@@ -350,7 +362,7 @@ background: linear-gradient(135deg, #e6a667 0%, #6a74e1 100%);
     </div>
 
     <!-- Project 2 -->
-    <div class="col-md-4 mb-4">
+    <div class="col-md-4 mb-4 reveal">
       <div class="card h-100 shadow-sm project">
         <div class="card-body">
           <h5 class="card-title">Portfolio Website</h5>
@@ -361,7 +373,7 @@ background: linear-gradient(135deg, #e6a667 0%, #6a74e1 100%);
     </div>
 
     <!-- Project 3 -->
-    <div class="col-md-4 mb-4">
+    <div class="col-md-4 mb-4 reveal">
       <div class="card h-100 shadow-sm project">
         <div class="card-body">
           <h5 class="card-title ">Hospital management System</h5>
@@ -378,7 +390,7 @@ background: linear-gradient(135deg, #e6a667 0%, #6a74e1 100%);
 
  
  <!-- Services Section -->
-<div class="container my-5" id="service">
+<div class="container my-5 reveal" id="service ">
   <h1>
         <b style="color: rgb(235, 127, 13);">My</b>
         <b style="color: rgb(161, 8, 8);">Services</b>
@@ -386,7 +398,7 @@ background: linear-gradient(135deg, #e6a667 0%, #6a74e1 100%);
   <div class="row">
 
     <!-- 1. Logo Design -->
-    <div class="col-lg-3 col-md-6 mb-4">
+    <div class="col-lg-3 col-md-6 mb-4 reveal">
       <div class="card service-card text-center p-4 h-100">
         <div class="icon-circle"><i class="bi bi-brush"></i></div>
         <h5 class="service-title">Logo Design</h5>
@@ -395,7 +407,7 @@ background: linear-gradient(135deg, #e6a667 0%, #6a74e1 100%);
     </div>
 
     <!-- 2. Web Development -->
-    <div class="col-lg-3 col-md-6 mb-4">
+    <div class="col-lg-3 col-md-6 mb-4 reveal">
       <div class="card service-card text-center p-4 h-100">
         <div class="icon-circle"><i class="bi bi-code-slash"></i></div>
         <h5 class="service-title">Web Development</h5>
@@ -404,7 +416,7 @@ background: linear-gradient(135deg, #e6a667 0%, #6a74e1 100%);
     </div>
 
     <!-- 3. Banner Design -->
-    <div class="col-lg-3 col-md-6 mb-4">
+    <div class="col-lg-3 col-md-6 mb-4 reveal">
       <div class="card service-card text-center p-4 h-100">
         <div class="icon-circle"><i class="bi bi-image"></i></div>
         <h5 class="service-title">Banner Design</h5>
@@ -413,7 +425,7 @@ background: linear-gradient(135deg, #e6a667 0%, #6a74e1 100%);
     </div>
 
     <!-- 4. Desktop Apps -->
-    <div class="col-lg-3 col-md-6 mb-4">
+    <div class="col-lg-3 col-md-6 mb-4 reveal">
       <div class="card service-card text-center p-4 h-100">
         <div class="icon-circle"><i class="bi bi-pc-display-horizontal"></i></div>
         <h5 class="service-title">Desktop Applications</h5>
@@ -422,7 +434,7 @@ background: linear-gradient(135deg, #e6a667 0%, #6a74e1 100%);
     </div>
 
     <!-- 5. Spring Boot APIs -->
-    <div class="col-lg-3 col-md-6 mb-4">
+    <div class="col-lg-3 col-md-6 mb-4 reveal">
       <div class="card service-card text-center p-4 h-100">
         <div class="icon-circle"><i class="bi bi-server"></i></div>
         <h5 class="service-title">Spring Boot APIs</h5>
@@ -431,7 +443,7 @@ background: linear-gradient(135deg, #e6a667 0%, #6a74e1 100%);
     </div>
 
     <!-- 6. C Programming -->
-    <div class="col-lg-3 col-md-6 mb-4">
+    <div class="col-lg-3 col-md-6 mb-4 reveal">
       <div class="card service-card text-center p-4 h-100">
         <div class="icon-circle"><i class="bi bi-terminal"></i></div>
         <h5 class="service-title">C Programming</h5>
@@ -440,7 +452,7 @@ background: linear-gradient(135deg, #e6a667 0%, #6a74e1 100%);
     </div>
 
     <!-- 7. Git & GitHub -->
-    <div class="col-lg-3 col-md-6 mb-4">
+    <div class="col-lg-3 col-md-6 mb-4 reveal">
       <div class="card service-card text-center p-4 h-100">
         <div class="icon-circle"><i class="bi bi-github"></i></div>
         <h5 class="service-title">Git & GitHub</h5>
@@ -451,7 +463,7 @@ background: linear-gradient(135deg, #e6a667 0%, #6a74e1 100%);
      
 
     <!-- 8. UI/UX Design -->
-    <div class="col-lg-3 col-md-6 mb-4">
+    <div class="col-lg-3 col-md-6 mb-4 reveal">
       <div class="card service-card text-center p-4 h-100">
         <div class="icon-circle"><i class="bi bi-easel2"></i></div>
         <h5 class="service-title">UI/UX Design</h5>
@@ -463,13 +475,13 @@ background: linear-gradient(135deg, #e6a667 0%, #6a74e1 100%);
 </div>
 
 <!-- contact us -->
- <div class="container-fluid" id="contact">
+ <div class="container-fluid reveal" id="contact">
    <h1>
         <b style="color: rgb(235, 127, 13);">Contact</b>
         <b style="color: rgb(161, 8, 8);">Us</b>
       </h1>
   <div class="row"style="  background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAkm17jtbQXGQUxH9DKK0lyEOiwXh6crUpkg&s');background-size:cover;background-repeat:no-repeat;" >
-    <div class="col-sm-6 text-light" >
+    <div class="col-sm-6 text-light reveal" >
       <h3 style="margin-top: 15px;color: red;">Let's Connect</h3>
        <p>I am always open to discussing new projects, opportunities, or just networking. Fill the form and I will get back to you soon! <br>
      <b>Email:</b>  ritikatiyar206@gmail.com <br>
@@ -478,7 +490,7 @@ background: linear-gradient(135deg, #e6a667 0%, #6a74e1 100%);
    
        
     </div>
-    <div class="col-sm-6" style="">
+    <div class="col-sm-6 reveal" style="">
  <div class="form-group">
           <label class="text-light">Your Name :</label>
           <input type="text" class="form-control" placeholder="Enter your name">
@@ -497,19 +509,19 @@ background: linear-gradient(135deg, #e6a667 0%, #6a74e1 100%);
     </div>
   </div>
  </div>
- <div class="container-fluid"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14803.310810861298!2d75.12618537269714!3d21.94117422913751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396207f404531967%3A0xd29926334a171180!2sRajpur%2C%20Madhya%20Pradesh%20451447!5e0!3m2!1sen!2sin!4v1752887566612!5m2!1sen!2sin" width="400" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+ <div class="container-fluid reveal"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14803.310810861298!2d75.12618537269714!3d21.94117422913751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396207f404531967%3A0xd29926334a171180!2sRajpur%2C%20Madhya%20Pradesh%20451447!5e0!3m2!1sen!2sin!4v1752887566612!5m2!1sen!2sin" width="400" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
 
 <!-- footer section -->
- <div class="container-fluid bg-dark text-light">
+ <div class="container-fluid bg-dark text-light reveal">
   <div class="row " >
-    <div class="col-sm-4"><div class="card bg-dark text-center  ">
+    <div class="col-sm-4 reveal"><div class="card bg-dark text-center  ">
       <div class="card-title mt-3"> <b style="font-family:cursive;font-size:30px;color: rgb(243, 120, 12);  ">Ktr </b> <b style="font-family: cursive;font-size: 30px; color: rgb(191, 16, 16);">Ritik</b><br>
     <p style="font-size: 20px;"><b>Address:-</b> Khasbara Rajpur Kanpur Dehat <br>
 <b>    Mobile No:-</b> +91 9569717161 <br>
   <b>  Pin Code :-</b> 209115</p>
 </div>
     </div></div>
-    <div class="col-sm-4"><div class="card bg-dark mt-3 text-center">
+    <div class="col-sm-4 reveal"><div class="card bg-dark mt-3 text-center">
       <div class="card-title"><h1 style="color: rgb(2, 245, 2);font-size: 30px; font-family: sans-serif, Helvetica, sans-serif;">Quick links</h1>
       <a href="#home" style="color:white;text-decoration: none;">Home</a><br>
      <a href="#about" style="color:white;text-decoration: none;">About Us</a><br>
@@ -519,7 +531,7 @@ background: linear-gradient(135deg, #e6a667 0%, #6a74e1 100%);
 
       </div>
     </div></div>
-    <div class="col-sm-4"><div class="card bg-dark text-center"><div class="card-title mt-3"><h1 style="color: rgb(2, 245, 2);font-size: 30px; font-family: sans-serif, Helvetica, sans-serif;">Follow Us !...</h1> <a href="Message Er. Ritik Katiyar on WhatsApp. https://wa.me/919235843234"><i class="bi bi-whatsapp" style="color: rgb(9, 232, 9); font-size: 35px;"></i></a>
+    <div class="col-sm-4 reveal"><div class="card bg-dark text-center"><div class="card-title mt-3"><h1 style="color: rgb(2, 245, 2);font-size: 30px; font-family: sans-serif, Helvetica, sans-serif;">Follow Us !...</h1> <a href="Message Er. Ritik Katiyar on WhatsApp. https://wa.me/919235843234"><i class="bi bi-whatsapp" style="color: rgb(9, 232, 9); font-size: 35px;"></i></a>
         <a href="https://www.instagram.com/katiyar_ritik_206_?igsh=a2g1YTM2NHk3Z2o1"><i class="bi bi-instagram" style="color: transparent;  background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;font-size: 35px;margin-left: 30px;"></i></a>
@@ -530,7 +542,7 @@ background: linear-gradient(135deg, #e6a667 0%, #6a74e1 100%);
 </div></div></div>
   </div>
  </div>
- <div class="container-fluid text-light bg-dark text-center"><b>Copyright © 2024-2025 Ritik Katiyar. All rights reserved.  </b></div>
+ <div class="container-fluid text-light bg-dark text-center "><b>Copyright © 2024-2025 Ritik Katiyar. All rights reserved.  </b></div>
 
 
 
@@ -540,7 +552,25 @@ background: linear-gradient(135deg, #e6a667 0%, #6a74e1 100%);
 
 
  
- 
+<script>
+  function reveal() {
+    document.querySelectorAll('.reveal').forEach(el => {
+      const windowHeight = window.innerHeight;
+      const elementTop = el.getBoundingClientRect().top;
+      const elementVisible = 100;
+
+      if (elementTop < windowHeight - elementVisible) {
+        el.classList.add('active');
+      } else {
+        el.classList.remove('active'); // optional: remove when out of view
+      }
+    });
+  }
+
+  window.addEventListener('scroll', reveal);
+  document.addEventListener('DOMContentLoaded', reveal);
+</script>
+
 
  
  
